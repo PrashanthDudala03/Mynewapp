@@ -1,0 +1,43 @@
+@page
+@model Mynewapp.Pages.Admin.IndexModel
+@{
+    ViewData["Title"] = "Admin Dashboard";
+}
+
+<h1>Admin Dashboard</h1>
+
+<div class="row">
+    <div class="col-md-6">
+        <div class="card shadow mb-4">
+            <div class="card-header bg-primary text-white">
+                <h5 class="mb-0">User Management</h5>
+            </div>
+            <div class="card-body">
+                <p>Manage users and their roles in the system.</p>
+                <a asp-page="./Users" class="btn btn-outline-primary">
+                    <i class="bi bi-people"></i> Manage Users
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-6">
+        <div class="card shadow mb-4">
+            <div class="card-header bg-success text-white">
+                <h5 class="mb-0">System Statistics</h5>
+            </div>
+            <div class="card-body">
+                <dl class="row">
+                    <dt class="col-sm-6">Total Users</dt>
+                    <dd class="col-sm-6">@Model.UserCount</dd>
+                    
+                    <dt class="col-sm-6">Total Items</dt>
+                    <dd class="col-sm-6">@Model.ItemCount</dd>
+                    
+                    <dt class="col-sm-6">Active Items</dt>
+                    <dd class="col-sm-6">@Model.ActiveItemCount</dd>
+                </dl>
+            </div>
+        </div>
+    </div>
+</div>

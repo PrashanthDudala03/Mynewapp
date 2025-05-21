@@ -1,0 +1,248 @@
+@page
+@model Mynewapp.Pages.Items.IndexModel
+@{
+    ViewData["Title"] = "Items";
+}
+
+<div class="container">
+    <h1 class="my-4">Items</h1>
+    
+    <div class="row mb-3">
+        <div class="col">
+            <div class="d-flex justify-content-between align-items-center">
+                <a asp-page="Create" class="btn btn-primary">
+                    <i class="fas fa-plus"></i> Create New
+                </a>
+                <div class="input-group w-50">
+                    <input type="text" id="searchInput" class="form-control" placeholder="Search items...">
+                    <button class="btn btn-outline-secondary" type="button" id="searchButton">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="notification-area" class="toast-container position-fixed top-0 end-0 p-3"></div>
+    
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-striped table-hover" id="itemsTable">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>Name</th>
+                            <th>Description</th>
+                            <th>Created Date</th>
+                            <th>Last Modified</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.Items)
+                        {
+                            <tr data-item-id="@item.ID">
+                                <td>@item.ID</td>
+                                <td>@item.Name</td>
+                                <td>@item.Description</td>
+                                <td>@item.CreatedDate.ToShortDateString()</td>
+                                <td>@item.LastModified.ToShortDateString()</td>
+                                <td>
+                                    @if (item.IsActive)
+                                    {
+                                        <span class="badge bg-success">Active</span>
+                                    }
+                                    else
+                                    {
+                                        <span class="badge bg-danger">Inactive</span>
+                                    }
+                                </td>
+                                <td>
+                                    <div class="btn-group" role="group">
+                                        <a asp-page="./Edit" asp-route-id="@item.ID" class="btn btn-sm btn-warning">
+                                            <i class="fas fa-edit"></i>
+                                        </a>
+                                        <a asp-page="./Details" asp-route-id="@item.ID" class="btn btn-sm btn-info">
+                                            <i class="fas fa-info-circle"></i>
+                                        </a>
+                                        <a asp-page="./Delete" asp-route-id="@item.ID" class="btn btn-sm btn-danger">
+                                            <i class="fas fa-trash"></i>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/lib/microsoft/signalr/dist/browser/signalr.js"></script>
+    <script>
+        // Initialize SignalR connection
+        const connection = new signalR.HubConnectionBuilder()
+            .withUrl("/itemHub")
+            .withAutomaticReconnect()
+            .build();
+            
+        // Start the connection
+        connection.start().catch(err => console.error(err));
+        
+        // Handle real-time item updates
+        connection.on("ReceiveItemUpdate", function (item) {
+            const row = document.querySelector(	r[data-item-id="\"]);
+            if (row) {
+                row.cells[1].textContent = item.name;
+                row.cells[2].textContent = item.description;
+                row.cells[4].textContent = new Date(item.lastModified).toLocaleDateString();
+                
+                const statusBadge = row.cells[5].querySelector('.badge');
+                if (item.isActive) {
+                    statusBadge.className = 'badge bg-success';
+                    statusBadge.textContent = 'Active';
+                } else {
+                    statusBadge.className = 'badge bg-danger';
+                    statusBadge.textContent = 'Inactive';
+                }
+                
+                // Highlight the updated row
+                row.classList.add('table-primary');
+                setTimeout(() => {
+                    row.classList.remove('table-primary');
+                }, 3000);
+                
+                // Show notification
+                showNotification('Item Updated', Item "\" has been updated., 'info');
+            }
+        });
+        
+        // Handle real-time item creation
+        connection.on("ReceiveItemCreated", function (item) {
+            const table = document.getElementById('itemsTable');
+            const tbody = table.querySelector('tbody');
+            
+            const newRow = document.createElement('tr');
+            newRow.setAttribute('data-item-id', item.id);
+            newRow.classList.add('table-success');
+            
+            newRow.innerHTML = 
+                <td>\</td>
+                <td>\</td>
+                <td>\</td>
+                <td>\</td>
+                <td>\</td>
+                <td>
+                    \
+                </td>
+                <td>
+                    <div class="btn-group" role="group">
+                        <a href="/Items/Edit?id=\" class="btn btn-sm btn-warning">
+                            <i class="fas fa-edit"></i>
+                        </a>
+                        <a href="/Items/Details?id=\" class="btn btn-sm btn-info">
+                            <i class="fas fa-info-circle"></i>
+                        </a>
+                        <a href="/Items/Delete?id=\" class="btn btn-sm btn-danger">
+                            <i class="fas fa-trash"></i>
+                        </a>
+                    </div>
+                </td>
+            ;
+            
+            tbody.appendChild(newRow);
+            
+            setTimeout(() => {
+                newRow.classList.remove('table-success');
+            }, 3000);
+            
+            // Show notification
+            showNotification('Item Created', New item "\" has been created., 'success');
+        });
+        
+        // Handle real-time item deletion
+        connection.on("ReceiveItemDeleted", function (itemId) {
+            const row = document.querySelector(	r[data-item-id="\"]);
+            if (row) {
+                row.classList.add('table-danger');
+                
+                setTimeout(() => {
+                    row.remove();
+                }, 1000);
+                
+                // Show notification
+                showNotification('Item Deleted', 'An item has been deleted.', 'warning');
+            }
+        });
+        
+        // Handle notifications
+        connection.on("ReceiveNotification", function (user, message) {
+            showNotification('Notification', \: \, 'primary');
+        });
+        
+        // Function to show notifications
+        function showNotification(title, message, type) {
+            const notificationArea = document.getElementById('notification-area');
+            
+            const toast = document.createElement('div');
+            toast.className = 	oast align-items-center text-white bg-\ border-0;
+            toast.setAttribute('role', 'alert');
+            toast.setAttribute('aria-live', 'assertive');
+            toast.setAttribute('aria-atomic', 'true');
+            
+            toast.innerHTML = 
+                <div class="d-flex">
+                    <div class="toast-body">
+                        <strong>\</strong>: \
+                    </div>
+                    <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+            ;
+            
+            notificationArea.appendChild(toast);
+            
+            const bsToast = new bootstrap.Toast(toast, {
+                autohide: true,
+                delay: 5000
+            });
+            
+            bsToast.show();
+            
+            // Remove toast from DOM after it's hidden
+            toast.addEventListener('hidden.bs.toast', function () {
+                toast.remove();
+            });
+        }
+        
+        // Search functionality
+        document.getElementById('searchButton').addEventListener('click', function() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const rows = document.querySelectorAll('#itemsTable tbody tr');
+            
+            rows.forEach(row => {
+                const name = row.cells[1].textContent.toLowerCase();
+                const description = row.cells[2].textContent.toLowerCase();
+                
+                if (name.includes(searchTerm) || description.includes(searchTerm)) {
+                    row.style.display = '';
+                } else {
+                    row.style.display = 'none';
+                }
+            });
+        });
+        
+        // Reset search on input clear
+        document.getElementById('searchInput').addEventListener('input', function() {
+            if (this.value === '') {
+                const rows = document.querySelectorAll('#itemsTable tbody tr');
+                rows.forEach(row => {
+                    row.style.display = '';
+                });
+            }
+        });
+    </script>
+}

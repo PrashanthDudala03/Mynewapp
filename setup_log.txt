@@ -1,0 +1,369 @@
+[2025-05-21 12:16:50] Project directory already exists at C:\Projects\Mynewapp
+[2025-05-21 12:16:50] Current directory: C:\Projects\Mynewapp
+[2025-05-21 12:16:50] Creating new ASP.NET Core Razor Pages project with authentication
+[2025-05-21 12:16:50] Project created at: C:\Projects\Mynewapp\Mynewapp
+[2025-05-21 12:16:50] Installing required NuGet packages
+[2025-05-21 12:16:50] Creating solution file
+[2025-05-21 12:16:50] Creating project structure directories
+[2025-05-21 12:16:50] Created directory: ViewModels
+[2025-05-21 12:16:50] Created directory: wwwroot\css\custom
+[2025-05-21 12:16:50] Created directory: wwwroot\js\custom
+[2025-05-21 12:16:50] Created directory: wwwroot\lib\signalr
+[2025-05-21 12:16:50] Created directory: wwwroot\images
+[2025-05-21 12:16:50] Downloading SignalR client library
+[2025-05-21 12:16:50] Downloaded SignalR client library to wwwroot\lib\signalr\signalr.min.js
+[2025-05-21 12:16:50] Downloading Font Awesome
+[2025-05-21 12:16:50] Downloaded Font Awesome to wwwroot\lib\fontawesome\css\all.min.css
+[2025-05-21 12:16:50] Created README.md file
+[2025-05-21 12:16:50] Building project to verify setup
+[2025-05-21 12:16:50] Project build failed with exit code 1
+[2025-05-21 12:16:50] Project setup script completed
+[2025-05-21 12:25:32] Project directory already exists at C:\Projects\Mynewapp
+[2025-05-21 12:25:32] Current directory: C:\Projects\Mynewapp
+[2025-05-21 12:25:32] Testing connection to SQL Server instance: IT-L14-02\INSTANCE1
+[2025-05-21 12:25:32] Successfully connected to SQL Server instance: IT-L14-02\INSTANCE1
+[2025-05-21 12:25:32] Installing SqlServer PowerShell module
+[2025-05-21 12:25:32] Checking if database 'Mynewapp-DB' exists on server 'IT-L14-02\INSTANCE1'
+[2025-05-21 12:25:32] Error creating database: A connection was successfully established with the server, but then an error occurred during the login process. (provider: SSL Provider, error: 0 - The certificate chain was issued by an authority that is not trusted.)
+[2025-05-21 12:25:32] Failed to create database. Please check SQL Server permissions and try again.
+[2025-05-21 12:27:51] Project directory already exists at C:\Projects\Mynewapp
+[2025-05-21 12:27:51] Current directory: C:\Projects\Mynewapp
+[2025-05-21 12:27:51] Testing connection to SQL Server instance: IT-L14-02\INSTANCE1
+[2025-05-21 12:27:51] Successfully connected to SQL Server instance: IT-L14-02\INSTANCE1
+[2025-05-21 12:27:51] Checking if database 'Mynewapp-DB' exists on server 'IT-L14-02\INSTANCE1'
+[2025-05-21 12:27:51] Error creating database: A connection was successfully established with the server, but then an error occurred during the login process. (provider: SSL Provider, error: 0 - The certificate chain was issued by an authority that is not trusted.)
+[2025-05-21 12:27:51] Failed to create database. Please check SQL Server permissions and try again.
+[2025-05-21 12:28:14] Project directory already exists at C:\Projects\Mynewapp
+[2025-05-21 12:28:14] Current directory: C:\Projects\Mynewapp
+[2025-05-21 12:28:14] Testing connection to SQL Server instance: IT-L14-02\INSTANCE1
+[2025-05-21 12:28:14] Successfully connected to SQL Server instance: IT-L14-02\INSTANCE1
+[2025-05-21 12:28:14] Checking if database 'Mynewapp-DB' exists on server 'IT-L14-02\INSTANCE1'
+[2025-05-21 12:28:14] Error creating database: A connection was successfully established with the server, but then an error occurred during the login process. (provider: SSL Provider, error: 0 - The certificate chain was issued by an authority that is not trusted.)
+[2025-05-21 12:28:14] Failed to create database. Please check SQL Server permissions and try again.
+[2025-05-21 12:31:45] Project directory already exists at C:\Projects\Mynewapp
+[2025-05-21 12:31:45] Current directory: C:\Projects\Mynewapp
+[2025-05-21 12:31:45] Testing connection to SQL Server instance: IT-L14-02\INSTANCE1
+[2025-05-21 12:31:45] SqlServer module not found. Installing...
+[2025-05-21 12:31:45] SqlServer module installed successfully
+[2025-05-21 12:31:45] Successfully connected to SQL Server instance: IT-L14-02\INSTANCE1
+[2025-05-21 12:31:45] Checking if database 'Mynewapp-DB' exists on server 'IT-L14-02\INSTANCE1'
+[2025-05-21 12:31:45] Error creating database: A connection was successfully established with the server, but then an error occurred during the login process. (provider: SSL Provider, error: 0 - The certificate chain was issued by an authority that is not trusted.)
+[2025-05-21 12:31:45] Failed to create database. Please check SQL Server permissions and try again.
+[2025-05-21 12:36:05] Project directory already exists at C:\Projects\Mynewapp
+[2025-05-21 12:36:05] Current directory: C:\Projects\Mynewapp
+[2025-05-21 12:36:05] Testing connection to SQL Server instance: IT-L14-02\INSTANCE1
+[2025-05-21 12:36:05] Successfully connected to SQL Server instance: IT-L14-02\INSTANCE1
+[2025-05-21 12:36:05] Checking if database 'Mynewapp-DB' exists on server 'IT-L14-02\INSTANCE1'
+[2025-05-21 12:36:05] 
+[2025-05-21 12:36:05] .NET SDK version 9.0.203 is installed
+[2025-05-21 12:36:05] Creating new ASP.NET Core Razor Pages project with authentication
+[2025-05-21 12:36:05] Project created at: C:\Projects\Mynewapp\Mynewapp
+[2025-05-21 12:36:05] Installing required NuGet packages
+[2025-05-21 12:36:05] Creating solution file
+[2025-05-21 12:36:05] Creating project structure directories
+[2025-05-21 12:36:05] Downloading SignalR client library
+[2025-05-21 12:36:05] Downloaded SignalR client library to wwwroot\lib\signalr\signalr.min.js
+[2025-05-21 12:36:05] Downloading Font Awesome
+[2025-05-21 12:36:05] Error downloading Font Awesome: 
+
+  
+    
+    
+    
+    Not Found
+    
+      body {
+        font-family: system-ui;
+        font-weight: 300;
+        font-size: 1.25rem;
+        color: #36393a;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      main {
+        max-width: 1200px;
+        margin-top: 120px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+      }
+      #text {
+        max-width: 60%;
+        margin-left: 1rem;
+        margin-right: 1rem;
+      }
+      main > section > div {
+        margin-bottom: 3.25rem;
+      }
+      svg {
+        margin-left: 2rem;
+      }
+      @keyframes eye-1 {
+        0% {
+          transform: translateX(0);
+        }
+        10%,
+        50% {
+          transform: translateX(-5px);
+        }
+        60% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(0px);
+        }
+      }
+      @keyframes eye-2 {
+        0% {
+          transform: translateX(0);
+        }
+        10%,
+        50% {
+          transform: translateX(5px);
+        }
+        60% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(0px);
+        }
+      }
+      svg > .eye-1 {
+        animation: eye-1 3s infinite;
+      }
+      svg > .eye-2 {
+        animation: eye-2 3s 0.6s infinite;
+      }
+      h1 {
+        font-size: 3.75rem;
+        font-weight: 400;
+        margin-bottom: 0.5rem;
+      }
+      h3 {
+        font-size: 2rem;
+        font-weight: 400;
+        color: #92979b;
+        margin: 0;
+      }
+      a {
+        color: #0055dc;
+      }
+      p {
+        margin: 0;
+      }
+      #error-title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+      #footer-title {
+        font-weight: 700;
+        margin-bottom: 0.75rem;
+      }
+    
+  
+  
+    
+      
+        
+          Error 404
+          Object not found
+        
+
+        
+          
+            This object does not exist or is not publicly accessible at this
+            URL. Check the URL of the object that you're looking for or contact
+            the owner to enable Public access.
+          
+        
+
+        
+          Is this your bucket?
+          
+            Learn how to enable
+            Public Access
+          
+        
+      
+
+      
+        
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+            
+          
+          
+            
+          
+          
+            
+          
+          
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+            
+          
+          
+            
+          
+          
+            
+          
+          
+            
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+          
+        
+      
+    
+  
+
+
+[2025-05-21 12:36:05] Continuing with setup...
+[2025-05-21 12:36:05] Created README.md file
+[2025-05-21 12:36:05] Created Item model class
+[2025-05-21 12:36:05] Updated ApplicationDbContext to include Items DbSet
+[2025-05-21 12:36:05] Updated connection string in appsettings.json
+[2025-05-21 12:36:05] Creating database migration script
+[2025-05-21 12:36:05] Created database migration script at C:\Projects\Mynewapp\setup_database.ps1
+[2025-05-21 12:36:05] Building project to verify setup
+[2025-05-21 12:36:05] Project build failed with exit code 1
+[2025-05-21 12:36:05] Please review the error messages and fix any remaining issues
+[2025-05-21 12:36:05] Project setup script completed
+[2025-05-21 13:00:13] Project directory already exists at C:\Projects\Mynewapp
+[2025-05-21 13:00:13] Current directory: C:\Projects\Mynewapp
+[2025-05-21 13:00:13] Testing connection to SQL Server instance: IT-L14-02\INSTANCE1
+[2025-05-21 13:00:13] Successfully connected to SQL Server instance: IT-L14-02\INSTANCE1
+[2025-05-21 13:00:13] Checking if database 'Mynewapp-DB' exists on server 'IT-L14-02\INSTANCE1'
+[2025-05-21 13:00:13] 
+[2025-05-21 13:00:13] Node.js version v18.17.1 is installed
+[2025-05-21 13:00:13] npm version 9.6.7 is installed
+[2025-05-21 13:00:13] Creating React frontend application
+[2025-05-21 13:00:13] Creating React application at C:\Projects\Mynewapp\frontend
+[2025-05-21 13:00:13] React application created successfully at C:\Projects\Mynewapp\frontend
+[2025-05-21 13:00:13] Installing additional frontend dependencies
+[2025-05-21 13:00:13] Creating backend API application
+[2025-05-21 13:00:13] Creating backend API at C:\Projects\Mynewapp\backend
+[2025-05-21 13:00:13] Backend API created successfully at C:\Projects\Mynewapp\backend
+[2025-05-21 13:00:13] Created TypeScript configuration for backend
+[2025-05-21 13:00:13] Created directory: C:\Projects\Mynewapp\backend\src
+[2025-05-21 13:00:13] Created directory: C:\Projects\Mynewapp\backend\src\controllers
+[2025-05-21 13:00:13] Created directory: C:\Projects\Mynewapp\backend\src\models
+[2025-05-21 13:00:13] Created directory: C:\Projects\Mynewapp\backend\src\routes
+[2025-05-21 13:00:13] Created directory: C:\Projects\Mynewapp\backend\src\middleware
+[2025-05-21 13:00:13] Created directory: C:\Projects\Mynewapp\backend\src\config
+[2025-05-21 13:00:13] Created directory: C:\Projects\Mynewapp\backend\src\utils
+[2025-05-21 13:00:13] Created database configuration
+[2025-05-21 13:00:13] Created .env file for backend
+[2025-05-21 13:00:13] Created server.ts file
+[2025-05-21 13:00:13] Updating package.json scripts for backend
+[2025-05-21 13:00:13] Updated package.json scripts for backend
+[2025-05-21 13:00:13] Created user model
+[2025-05-21 13:00:13] Created user type definition
+[2025-05-21 13:00:13] Created auth controller
+[2025-05-21 13:00:13] Created auth routes
+[2025-05-21 13:00:13] Updated server.ts to include auth routes
+[2025-05-21 13:00:13] Created auth middleware
+[2025-05-21 13:00:13] Created SQL script for database tables
+[2025-05-21 13:00:13] Created PowerShell script to execute SQL script
+[2025-05-21 13:00:13] Creating React components for the UI
+[2025-05-21 13:00:13] Created components directory
+[2025-05-21 13:00:13] Created pages directory
+[2025-05-21 13:00:13] Created services directory
+[2025-05-21 13:00:13] Created API service
+[2025-05-21 13:00:13] Created socket service
+[2025-05-21 13:00:13] Created Navbar component
+[2025-05-21 13:00:13] Created Footer component
+[2025-05-21 13:00:13] Created Home page
+[2025-05-21 13:00:13] Created Login page
+[2025-05-21 13:00:13] Created Register page
+[2025-05-21 13:00:13] Updated App.tsx
+[2025-05-21 13:00:13] Created custom CSS
+[2025-05-21 13:00:13] Created start script for both frontend and backend
+[2025-05-21 13:00:13] Created README.md
+[2025-05-21 13:00:13] Project setup completed successfully!
+[2025-05-21 13:00:13] Next steps:
+[2025-05-21 13:00:13] 1. Run execute_sql_script.ps1 to create database tables
+[2025-05-21 13:00:13] 2. Navigate to frontend directory and run 'npm install'
+[2025-05-21 13:00:13] 3. Navigate to backend directory and run 'npm install'
+[2025-05-21 13:00:13] 4. Run start_app.ps1 to start both frontend and backend
