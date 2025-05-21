@@ -1,0 +1,31 @@
+@page
+@model Mynewapp.Pages.Items.DetailsModel
+@{
+    ViewData["Title"] = "Item Details";
+}
+
+<h1>Item Details</h1>
+
+<div>
+    <dl class="row">
+        <dt class="col-sm-3">ID</dt>
+        <dd class="col-sm-9">@Model.Item.ID</dd>
+        
+        <dt class="col-sm-3">Name</dt>
+        <dd class="col-sm-9">@Model.Item.Name</dd>
+        
+        <dt class="col-sm-3">Description</dt>
+        <dd class="col-sm-9">@Model.Item.Description</dd>
+        
+        <dt class="col-sm-3">Created Date</dt>
+        <dd class="col-sm-9">@Model.Item.CreatedDate.ToShortDateString()</dd>
+        
+        <dt class="col-sm-3">Is Active</dt>
+        <dd class="col-sm-9">@(Model.Item.IsActive ? "Yes" : "No")</dd>
+    </dl>
+</div>
+
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Item.ID" class="btn btn-warning">Edit</a>
+    <a asp-page="./Index" class="btn btn-secondary">Back to List</a>
+</div>
